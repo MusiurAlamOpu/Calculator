@@ -3,10 +3,13 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
+            <file>file:/C:/Users/musiu/Documents/NetBeansProjects/Complex%20Calculator/src/complex/calculator/FXMLScientificMoodController.java</file>
+            <file>file:/C:/Users/musiu/Documents/NetBeansProjects/Complex%20Calculator/src/complex/calculator/Exeption.java</file>
             <file>file:/C:/Users/musiu/Documents/NetBeansProjects/Complex%20Calculator/src/BasicMood/BasicOperation.java</file>
-            <file>file:/C:/Users/musiu/Documents/NetBeansProjects/Complex%20Calculator/src/complex/calculator/FXMLDocumentController.java</file>
             <file>file:/C:/Users/musiu/Documents/NetBeansProjects/Complex%20Calculator/src/complex/calculator/ComplexCalculator.java</file>
+            <file>file:/C:/Users/musiu/Documents/NetBeansProjects/Complex%20Calculator/src/complex/calculator/FXMLScientificMood.fxml</file>
             <file>file:/C:/Users/musiu/Documents/NetBeansProjects/Complex%20Calculator/src/complex/calculator/FXMLDocument.fxml</file>
+            <file>file:/C:/Users/musiu/Documents/NetBeansProjects/Complex%20Calculator/src/complex/calculator/FXMLDocumentController.java</file>
         </group>
     </open-files>
 </project-private>

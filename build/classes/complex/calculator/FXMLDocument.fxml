@@ -47,17 +47,18 @@
             <Button fx:id="oneBYxButton" onAction="#oneBYx" prefHeight="88.0" prefWidth="110.0" text="1/x" GridPane.rowIndex="1" />
          </children>
       </GridPane>
-      <MenuButton fx:id="menuButton" layoutY="3.0" mnemonicParsing="false" onAction="#menuButtonClick" prefHeight="31.0" prefWidth="85.0" text="Menu">
-        <items>
-          <MenuItem mnemonicParsing="true" text="Action 1" />
-          <MenuItem mnemonicParsing="true" text="Action 2" />
-        </items>
-      </MenuButton>
       <HBox layoutY="644.0" prefHeight="91.0" prefWidth="401.0">
          <children>
             <Button fx:id="numberd0button" onAction="#processNumpad" prefHeight="91.0" prefWidth="101.0" text="0" />
             <Button fx:id="floatingPointButton" onAction="#processNumpad" prefHeight="93.0" prefWidth="99.0" text="." />
             <Button fx:id="equalButton" onAction="#processOperation" prefHeight="91.0" prefWidth="200.0" text="=" />
+         </children>
+      </HBox>
+      <HBox prefHeight="37.0" prefWidth="401.0">
+         <children>
+            <Button fx:id="basicMoodButton" mnemonicParsing="false" onAction="#basicMoodButtonClick" prefHeight="37.0" prefWidth="118.0" text="BasicMood" />
+            <Button fx:id="scientificMoodButton" mnemonicParsing="false" onAction="#scientificMoodButtonClick" prefHeight="37.0" prefWidth="118.0" text="ScientificMood" />
+            <Button fx:id="aboutButton" mnemonicParsing="false" onAction="#aboutButtonClick" prefHeight="37.0" prefWidth="118.0" text="About" />
          </children>
       </HBox>
     </children>
