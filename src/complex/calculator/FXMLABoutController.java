@@ -17,10 +17,11 @@ public class FXMLABoutController implements Initializable {
 
     @FXML
     private Button basicMoodButton;
-    @FXML
     private Button scientificMoodButton;
     @FXML
     private Button aboutButton;
+    @FXML
+    private Button ScientificMoodButton;
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
@@ -33,19 +34,37 @@ public class FXMLABoutController implements Initializable {
         Stage window = (Stage) basicMoodButton.getScene().getWindow();
         window.setScene(new Scene(root));
     }
-
-    @FXML
-    private void scientificMoodButtonClick(ActionEvent event) throws IOException {
+     @FXML
+    private void scientificMoodButtonClick() throws IOException{
         Parent root = FXMLLoader.load(getClass().getResource("FXMLScientificMood.fxml"));
         Stage window = (Stage) scientificMoodButton.getScene().getWindow();
         window.setScene(new Scene(root));
     }
 
+//    @FXML
+//    private void scientificMoodButtonClick(ActionEvent event) throws IOException {
+//        try {
+//            Parent root = FXMLLoader.load(getClass().getResource("FXMLScientificMood.fxml"));
+//        Stage window = (Stage) scientificMoodButton.getScene().getWindow();
+//        window.setScene(new Scene(root));
+//			
+//            }catch(NullPointerException e) {
+//	System.out.println("NullPointerException thrown!");
+//            }
+//        
+//    }
+
     @FXML
     private void aboutButtonClick(ActionEvent event) throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("About.fxml"));
-        Stage window = (Stage) aboutButton.getScene().getWindow();
-        window.setScene(new Scene(root));
+        
+        try {
+            Parent root = FXMLLoader.load(getClass().getResource("FXMLABout.fxml"));
+            Stage window = (Stage) aboutButton.getScene().getWindow();
+            window.setScene(new Scene(root));
+			
+            }catch(NullPointerException e) {
+	System.out.println("NullPointerException thrown!");
+            }
     }
     
 }

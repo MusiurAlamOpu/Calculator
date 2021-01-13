@@ -7,7 +7,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
-public class ComplexCalculator extends Application {
+public class Calculator extends Application {
     
     @Override
     public void start(Stage stage) throws Exception {
