@@ -12,7 +12,7 @@ public class Calculator extends Application {
     @Override
     public void start(Stage stage) throws Exception {
         Parent root = FXMLLoader.load(getClass().getResource("FXMLDocument.fxml"));
-        stage.setTitle("Complex Calculator");
+        stage.setTitle("Calculator");
         Scene scene = new Scene(root);
         stage.setScene(scene);
         stage.show();

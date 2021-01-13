@@ -34,25 +34,23 @@ public class FXMLABoutController implements Initializable {
         Stage window = (Stage) basicMoodButton.getScene().getWindow();
         window.setScene(new Scene(root));
     }
-     @FXML
-    private void scientificMoodButtonClick() throws IOException{
-        Parent root = FXMLLoader.load(getClass().getResource("FXMLScientificMood.fxml"));
-        Stage window = (Stage) scientificMoodButton.getScene().getWindow();
-        window.setScene(new Scene(root));
-    }
-
-//    @FXML
-//    private void scientificMoodButtonClick(ActionEvent event) throws IOException {
-//        try {
-//            Parent root = FXMLLoader.load(getClass().getResource("FXMLScientificMood.fxml"));
+//     @FXML
+//    private void scientificMoodButtonClick() throws IOException{
+//        Parent root = FXMLLoader.load(getClass().getResource("FXMLScientificMood.fxml"));
 //        Stage window = (Stage) scientificMoodButton.getScene().getWindow();
 //        window.setScene(new Scene(root));
-//			
-//            }catch(NullPointerException e) {
-//	System.out.println("NullPointerException thrown!");
-//            }
-//        
 //    }
+
+    @FXML
+    private void scientificMoodButtonClick(ActionEvent event) throws IOException {
+        try {
+            Parent root = FXMLLoader.load(getClass().getResource("FXMLScientificMood.fxml"));
+            Stage window = (Stage) scientificMoodButton.getScene().getWindow();
+            window.setScene(new Scene(root));		
+                }catch(NullPointerException e) {
+                        System.out.println("NullPointerException thrown!");
+                }
+          }
 
     @FXML
     private void aboutButtonClick(ActionEvent event) throws IOException {
