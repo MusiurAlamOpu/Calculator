@@ -9,7 +9,7 @@
 
 <AnchorPane id="AnchorPane" maxHeight="727.0" maxWidth="400.0" prefHeight="727.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="complex.calculator.FXMLDocumentController">
     <children>
-      <TextField fx:id="output" layoutY="31.0" onAction="#output" prefHeight="173.0" prefWidth="401.0">
+      <TextField fx:id="output" alignment="BASELINE_LEFT" layoutY="33.0" onAction="#output" prefHeight="171.0" prefWidth="401.0">
          <font>
             <Font size="40.0" />
          </font></TextField>
@@ -28,40 +28,117 @@
             <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
-              <Button fx:id="number4Button" onAction="#processNumpad" prefHeight="88.0" prefWidth="107.0" text="4" GridPane.rowIndex="3" />
-            <Button fx:id="number9Button" onAction="#processNumpad" prefHeight="88.0" prefWidth="111.0" text="9" GridPane.columnIndex="2" GridPane.rowIndex="2" />
-            <Button fx:id="clearButton" onAction="#clearButtonClick" prefHeight="88.0" prefWidth="110.0" text="C" GridPane.columnIndex="2" />
-            <Button fx:id="number8Button" onAction="#processNumpad" prefHeight="88.0" prefWidth="141.0" text="8" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-            <Button fx:id="number7Button" onAction="#processNumpad" prefHeight="88.0" prefWidth="104.0" text="7" GridPane.rowIndex="2" />
-            <Button fx:id="buttonClearEntry" onAction="#buttonClearEntryClick" prefHeight="88.0" prefWidth="106.0" text="CE" GridPane.columnIndex="1" />
-            <Button fx:id="number5Button" onAction="#processNumpad" prefHeight="88.0" prefWidth="120.0" text="5" GridPane.columnIndex="1" GridPane.rowIndex="3" />
-            <Button fx:id="operatorButtonDivide" onAction="#processOperation" prefHeight="93.0" prefWidth="99.0" text="/" GridPane.columnIndex="3" GridPane.rowIndex="1" />
-            <Button fx:id="operationButtonMinus" onAction="#processOperation" prefHeight="93.0" prefWidth="99.0" text="-" GridPane.columnIndex="3" GridPane.rowIndex="3" />
-            <Button fx:id="number6Button" onAction="#processNumpad" prefHeight="88.0" prefWidth="119.0" text="6" GridPane.columnIndex="2" GridPane.rowIndex="3" />
-            <Button fx:id="operatorButtonMultiple" onAction="#processOperation" prefHeight="93.0" prefWidth="99.0" text="*" GridPane.columnIndex="3" GridPane.rowIndex="2" />
-            <Button fx:id="operatorButtonPlus" onAction="#processOperation" prefHeight="93.0" prefWidth="99.0" text="+" GridPane.columnIndex="3" GridPane.rowIndex="4" />
-            <Button fx:id="number3Button" onAction="#processNumpad" prefHeight="88.0" prefWidth="127.0" text="3" GridPane.columnIndex="2" GridPane.rowIndex="4" />
-            <Button fx:id="number2Button" onAction="#processNumpad" prefHeight="88.0" prefWidth="143.0" text="2" GridPane.columnIndex="1" GridPane.rowIndex="4" />
-            <Button fx:id="number1Button" onAction="#processNumpad" prefHeight="88.0" prefWidth="109.0" text="1" GridPane.rowIndex="4" />
-            <Button fx:id="backButton" onAction="#backButtonClick" prefHeight="93.0" prefWidth="99.0" text="BACK" GridPane.columnIndex="3" />
-            <Button fx:id="percentageButton" onAction="#processOperation" prefHeight="88.0" prefWidth="116.0" text="Percentage" />
-            <Button fx:id="squareButton" onAction="#Square" prefHeight="88.0" prefWidth="117.0" text="Square" GridPane.columnIndex="2" GridPane.rowIndex="1" />
-            <Button fx:id="squarerootButton" onAction="#SquareRoot" prefHeight="88.0" prefWidth="122.0" text="SquareRoot" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-            <Button fx:id="oneBYxButton" onAction="#oneBYx" prefHeight="88.0" prefWidth="110.0" text="1/x" GridPane.rowIndex="1" />
+              <Button fx:id="number4Button" onAction="#processNumpad" prefHeight="88.0" prefWidth="107.0" text="4" GridPane.rowIndex="3">
+               <font>
+                  <Font size="38.0" />
+               </font></Button>
+            <Button fx:id="number9Button" onAction="#processNumpad" prefHeight="88.0" prefWidth="111.0" text="9" GridPane.columnIndex="2" GridPane.rowIndex="2">
+               <font>
+                  <Font size="38.0" />
+               </font></Button>
+            <Button fx:id="clearButton" onAction="#clearButtonClick" prefHeight="88.0" prefWidth="110.0" text="C" GridPane.columnIndex="2">
+               <font>
+                  <Font name="System Bold" size="38.0" />
+               </font></Button>
+            <Button fx:id="number8Button" onAction="#processNumpad" prefHeight="88.0" prefWidth="141.0" text="8" GridPane.columnIndex="1" GridPane.rowIndex="2">
+               <font>
+                  <Font size="38.0" />
+               </font></Button>
+            <Button fx:id="number7Button" onAction="#processNumpad" prefHeight="88.0" prefWidth="104.0" text="7" GridPane.rowIndex="2">
+               <font>
+                  <Font size="38.0" />
+               </font></Button>
+            <Button fx:id="buttonClearEntry" onAction="#buttonClearEntryClick" prefHeight="88.0" prefWidth="106.0" text="CE" GridPane.columnIndex="1">
+               <font>
+                  <Font name="System Bold" size="28.0" />
+               </font></Button>
+            <Button fx:id="number5Button" onAction="#processNumpad" prefHeight="88.0" prefWidth="120.0" text="5" GridPane.columnIndex="1" GridPane.rowIndex="3">
+               <font>
+                  <Font size="38.0" />
+               </font></Button>
+            <Button fx:id="operatorButtonDivide" onAction="#processOperation" prefHeight="93.0" prefWidth="99.0" text="/" GridPane.columnIndex="3" GridPane.rowIndex="1">
+               <font>
+                  <Font size="38.0" />
+               </font></Button>
+            <Button fx:id="operationButtonMinus" onAction="#processOperation" prefHeight="93.0" prefWidth="99.0" text="-" GridPane.columnIndex="3" GridPane.rowIndex="3">
+               <font>
+                  <Font size="38.0" />
+               </font></Button>
+            <Button fx:id="number6Button" onAction="#processNumpad" prefHeight="88.0" prefWidth="119.0" text="6" GridPane.columnIndex="2" GridPane.rowIndex="3">
+               <font>
+                  <Font size="38.0" />
+               </font></Button>
+            <Button fx:id="operatorButtonMultiple" onAction="#processOperation" prefHeight="93.0" prefWidth="99.0" text="*" GridPane.columnIndex="3" GridPane.rowIndex="2">
+               <font>
+                  <Font size="38.0" />
+               </font></Button>
+            <Button fx:id="operatorButtonPlus" onAction="#processOperation" prefHeight="93.0" prefWidth="99.0" text="+" GridPane.columnIndex="3" GridPane.rowIndex="4">
+               <font>
+                  <Font size="38.0" />
+               </font></Button>
+            <Button fx:id="number3Button" onAction="#processNumpad" prefHeight="88.0" prefWidth="127.0" text="3" GridPane.columnIndex="2" GridPane.rowIndex="4">
+               <font>
+                  <Font size="38.0" />
+               </font></Button>
+            <Button fx:id="number2Button" onAction="#processNumpad" prefHeight="88.0" prefWidth="143.0" text="2" GridPane.columnIndex="1" GridPane.rowIndex="4">
+               <font>
+                  <Font size="38.0" />
+               </font></Button>
+            <Button fx:id="number1Button" onAction="#processNumpad" prefHeight="88.0" prefWidth="109.0" text="1" GridPane.rowIndex="4">
+               <font>
+                  <Font size="38.0" />
+               </font></Button>
+            <Button fx:id="backButton" onAction="#backButtonClick" prefHeight="93.0" prefWidth="99.0" text="BACK" GridPane.columnIndex="3">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font></Button>
+            <Button fx:id="percentageButton" onAction="#processOperation" prefHeight="88.0" prefWidth="116.0" text="Percentage">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font></Button>
+            <Button fx:id="squareButton" onAction="#Square" prefHeight="88.0" prefWidth="117.0" text="Square" GridPane.columnIndex="2" GridPane.rowIndex="1">
+               <font>
+                  <Font name="System Bold" size="21.0" />
+               </font></Button>
+            <Button fx:id="squarerootButton" onAction="#SquareRoot" prefHeight="88.0" prefWidth="122.0" text="SquareRoot" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font></Button>
+            <Button fx:id="oneBYxButton" onAction="#oneBYx" prefHeight="88.0" prefWidth="110.0" text="1/x" GridPane.rowIndex="1">
+               <font>
+                  <Font name="System Bold" size="29.0" />
+               </font></Button>
          </children>
       </GridPane>
       <HBox layoutY="644.0" prefHeight="91.0" prefWidth="401.0">
          <children>
-            <Button fx:id="numberd0button" onAction="#processNumpad" prefHeight="91.0" prefWidth="101.0" text="0" />
-            <Button fx:id="floatingPointButton" onAction="#processNumpad" prefHeight="93.0" prefWidth="99.0" text="." />
-            <Button fx:id="equalButton" onAction="#processOperation" prefHeight="91.0" prefWidth="200.0" text="=" />
+            <Button fx:id="numberd0button" onAction="#processNumpad" prefHeight="91.0" prefWidth="101.0" text="0">
+               <font>
+                  <Font size="38.0" />
+               </font></Button>
+            <Button fx:id="floatingPointButton" onAction="#processNumpad" prefHeight="91.0" prefWidth="100.0" text=".">
+               <font>
+                  <Font size="38.0" />
+               </font></Button>
+            <Button fx:id="equalButton" onAction="#processOperation" prefHeight="91.0" prefWidth="199.0" text="=">
+               <font>
+                  <Font size="38.0" />
+               </font></Button>
          </children>
       </HBox>
-      <HBox prefHeight="22.0" prefWidth="401.0">
+      <HBox prefHeight="33.0" prefWidth="401.0">
          <children>
-            <Button fx:id="basicMoodButton" mnemonicParsing="false" onAction="#basicMoodButtonClick" prefHeight="31.0" prefWidth="95.0" text="BasicMood" />
-            <Button fx:id="scientificMoodButton" mnemonicParsing="false" onAction="#scientificMoodButtonClick" prefHeight="31.0" prefWidth="119.0" text="ScientificMood" />
-            <Button fx:id="aboutButton" mnemonicParsing="false" onAction="#aboutButtonClick" prefHeight="31.0" prefWidth="61.0" text="About" />
+            <MenuButton fx:id="moodButton" mnemonicParsing="false" onAction="#moodButtonClick" text="Mood">
+              <items>
+                <MenuItem mnemonicParsing="false" text="Basic" />
+                <MenuItem mnemonicParsing="false" text="Scientific" />
+                  <MenuItem mnemonicParsing="false" text="Programmer" />
+                  <MenuItem mnemonicParsing="false" text="Converter" />
+                  <MenuItem mnemonicParsing="false" text="Date Calculation" />
+                  <MenuItem mnemonicParsing="false" text="Help" />
+                  <MenuItem mnemonicParsing="false" text="About" />
+              </items>
+            </MenuButton>
          </children>
       </HBox>
     </children>

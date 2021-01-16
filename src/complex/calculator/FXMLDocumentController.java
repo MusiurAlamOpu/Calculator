@@ -6,22 +6,17 @@
 package complex.calculator;
 
 import BasicMood.BasicOperation;
-import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.MenuButton;
 import javafx.scene.control.TextField;
-import javafx.stage.Stage;
-
 /**
  *
- * @author musiu
+ * @author musiur
  */
 public class FXMLDocumentController implements Initializable {
 
@@ -75,17 +70,12 @@ public class FXMLDocumentController implements Initializable {
     private Button number4Button;
     
     
-    @FXML
-    Button basicMoodButton;
-    @FXML
-    Button scientificMoodButton;
-    @FXML
-    Button aboutButton;
-    
     
     private double number1 = 0;
     private String operator = "";
     private boolean start;
+    @FXML
+    private MenuButton moodButton;
  
     
     public FXMLDocumentController() {
@@ -95,26 +85,6 @@ public class FXMLDocumentController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
-    }
-    @FXML
-    private void basicMoodButtonClick() throws IOException{
-        Parent root = FXMLLoader.load(getClass().getResource("FXMLDocument.fxml"));
-        Stage window = (Stage) basicMoodButton.getScene().getWindow();
-        window.setScene(new Scene(root));
-    }
-    
-    
-    @FXML
-    private void scientificMoodButtonClick() throws IOException{
-        Parent root = FXMLLoader.load(getClass().getResource("FXMLScientificMood.fxml"));
-        Stage window = (Stage) scientificMoodButton.getScene().getWindow();
-        window.setScene(new Scene(root));
-    }
-    @FXML
-    private void aboutButtonClick() throws IOException{
-        Parent root = FXMLLoader.load(getClass().getResource("FXMLAbout.fxml"));
-        Stage window = (Stage) aboutButton.getScene().getWindow();
-        window.setScene(new Scene(root));
     }
     
     
@@ -127,29 +97,29 @@ public class FXMLDocumentController implements Initializable {
     }
 
     @FXML
-    private void buttonClearEntryClick(ActionEvent event) {
-        String value = ((Button) event.getSource()).getText();
-        int len = value.length();
-        char[] newValue = new char[(len - 1)];
-        for (int i = 0; i < len; i++) {
-            newValue[i] = value.charAt(i);
-        }
-        String valueAfterBack = String.valueOf(newValue);
-        value = valueAfterBack;
-        output.setText(value);
+    private void buttonClearEntryClick(ActionEvent event) throws Exception{
+        try{
+         String currentText = output.getText();
+        int lenghtOfcurrentText = currentText.length();
+        String previousText = currentText.substring(lenghtOfcurrentText);
+        output.setText(previousText);
+       }catch(Exception e){
+            System.out.println("No text found on screen!");
+            output.setText("Press C!");
+       }
     }
 
     @FXML
-    private void backButtonClick(ActionEvent event) {
-        String value = ((Button) event.getSource()).getText();
-        int len = value.length();
-        char[] newValue = new char[(len - 1)];
-        for (int i = 0; i < len; i++) {
-            newValue[i] = value.charAt(i);
+    private void backButtonClick(ActionEvent event)  throws Exception{
+        try{
+            String currentText = output.getText();
+            int lenghtOfcurrentText = currentText.length();
+            String previousText = currentText.substring(0, (lenghtOfcurrentText-1));
+            output.setText(previousText); 
+        }catch(Exception e){
+            System.out.println("No text found on Screen!");
+            output.setText("Press C!");
         }
-        String valueAfterBack = String.valueOf(newValue);
-
-        output.setText(valueAfterBack);
     }
 
     
@@ -190,16 +160,13 @@ public class FXMLDocumentController implements Initializable {
     @FXML
     private void processOperation(ActionEvent event) {
         String value = ((Button) event.getSource()).getText();
-
         if (!"=".equals(value)) {
             if (!operator.isEmpty()) {
                 return;
             }
-
             operator = value;
             number1 = Double.valueOf(output.getText());
             output.setText("");
-
         } else {
             if (operator.isEmpty()) {
                 return;
@@ -208,5 +175,9 @@ public class FXMLDocumentController implements Initializable {
             operator = "";
             start = true;
         }
+    }
+
+    @FXML
+    private void moodButtonClick(ActionEvent event) {
     }
 }
