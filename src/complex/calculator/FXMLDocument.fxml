@@ -135,6 +135,7 @@
                   <MenuItem mnemonicParsing="false" text="Programmer" />
                   <MenuItem mnemonicParsing="false" text="Converter" />
                   <MenuItem mnemonicParsing="false" text="Date Calculation" />
+                  <MenuItem mnemonicParsing="false" text="History and memory" />
                   <MenuItem mnemonicParsing="false" text="Help" />
                   <MenuItem mnemonicParsing="false" text="About" />
               </items>
