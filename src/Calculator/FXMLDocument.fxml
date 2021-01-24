@@ -131,7 +131,7 @@
             <MenuButton fx:id="moodButton" mnemonicParsing="false" onAction="#moodButtonClick" text="Mood">
               <items>
                 <MenuItem mnemonicParsing="false" text="Basic" />
-                <MenuItem mnemonicParsing="false" text="Scientific" />
+                <MenuItem fx:id="ScientificMoodMenuItem" mnemonicParsing="false" onAction="#ScientificMenuItemClick" text="Scientific" />
                   <MenuItem mnemonicParsing="false" text="Programmer" />
                   <MenuItem mnemonicParsing="false" text="Converter" />
                   <MenuItem mnemonicParsing="false" text="Date Calculation" />

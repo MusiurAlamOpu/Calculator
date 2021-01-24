@@ -1,9 +1,5 @@
 
 package BasicMood;
-
-//import java.lang.Math;
-
-
 public class BasicOperation {
     
     
